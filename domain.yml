@@ -1,0 +1,80 @@
+--- 
+  entities: 
+    - from
+    - to
+    - time
+  forms: 
+    - train_booking_form
+  intents: 
+    - greet
+    - goodbye
+    - affirm
+    - deny
+    - inform
+  responses: 
+    utter_ask_from: 
+      - 
+        text: "From where do you want to take it?"
+      - 
+        text: "From where?"
+      - 
+        text: "From where do you leave?"
+    utter_ask_time: 
+      - 
+        text: "When do you need it?"
+      - 
+        text: "For what date?"
+    utter_ask_to: 
+      - 
+        text: "Where do you want to go?"
+      - 
+        text: "To which destination?"
+    utter_default: 
+      - 
+        text: "Sorry, I didn't understand you..."
+    utter_did_that_help: 
+      - 
+        text: "Did that help you?"
+    utter_goodbye: 
+      - 
+        text: Bye
+    utter_greet: 
+      - 
+        text: "Hey! I am a Train booking assistant, how can I help you?"
+    utter_happy: 
+      - 
+        text: "Great, carry on!"
+    utter_not_found: 
+      - 
+        text: "Train not found for this date, please tell me another date!"
+    utter_slots_values: 
+      - 
+        text: |-
+            All done! I've just booked the following Train:
+             - from: {from}
+             - to: {to}
+             - time: {time}.
+            See you next time!
+    utter_sorry: 
+      - 
+        text: "Sorry for not being very helpful. See you next time!"
+    utter_submit: 
+      - 
+        text: |-
+            Perfect! I am going to book a Train search using the following parameters:
+             - from: {from}
+             - to: {to}
+             - time: {time}. Is it correct?
+  session_config: 
+    carry_over_slots_to_new_session: true
+    session_expiration_time: 60
+  slots: 
+    from: 
+      type: unfeaturized
+    requested_slot: 
+      type: unfeaturized
+    time: 
+      type: unfeaturized
+    to: 
+      type: unfeaturized
+  
